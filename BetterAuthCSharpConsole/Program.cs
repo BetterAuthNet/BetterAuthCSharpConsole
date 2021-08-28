@@ -64,7 +64,7 @@ namespace BetterAuthCSharpConsole
                                     Console.WriteLine("Product ID: ");
                                         string productid = Console.ReadLine();
                                         bool has_sub = false;
-                                        string time_left = betterauth.has_sub(Convert.ToUInt32(productid), &has_sub);
+                                        string time_left = betterauth.has_sub(Convert.ToUInt32(productid), out has_sub);
                                         if (has_sub)
                                         {
                                             Console.WriteLine("User has a sub for this product it will expire on: " + time_left);
@@ -79,12 +79,12 @@ namespace BetterAuthCSharpConsole
                                     Console.WriteLine("Product ID: ");
                                         string productid = Console.ReadLine();
                                         bool has_sub = false;
-                                        string time_left = betterauth.has_sub(Convert.ToUInt32(productid), &has_sub);
+                                        string time_left = betterauth.has_sub(Convert.ToUInt32(productid), out has_sub);
                                         if (has_sub)
                                         {
                                             UInt64 buffer;
                                             UInt32 size;
-                                            if(betterauth.get_file(Convert.ToUInt32(productid), &buffer, &size))
+                                            if(betterauth.get_file(Convert.ToUInt32(productid), out buffer, out size))
                                             {
                                                 Console.WriteLine("Downloaded file from Server");
                                             }
