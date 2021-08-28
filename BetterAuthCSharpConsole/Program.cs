@@ -61,9 +61,7 @@ namespace BetterAuthCSharpConsole
                             {
                                 if (logged_in)
                                 {
-                                    unsafe
-                                    {
-                                        Console.WriteLine("Product ID: ");
+                                    Console.WriteLine("Product ID: ");
                                         string productid = Console.ReadLine();
                                         bool has_sub = false;
                                         string time_left = betterauth.has_sub(Convert.ToUInt32(productid), &has_sub);
@@ -71,7 +69,6 @@ namespace BetterAuthCSharpConsole
                                         {
                                             Console.WriteLine("User has a sub for this product it will expire on: " + time_left);
                                         }
-                                    }
                                 }
                                 break;
                             }
@@ -79,9 +76,7 @@ namespace BetterAuthCSharpConsole
                             {
                                 if (logged_in)
                                 {
-                                    unsafe
-                                    {
-                                        Console.WriteLine("Product ID: ");
+                                    Console.WriteLine("Product ID: ");
                                         string productid = Console.ReadLine();
                                         bool has_sub = false;
                                         string time_left = betterauth.has_sub(Convert.ToUInt32(productid), &has_sub);
@@ -103,7 +98,6 @@ namespace BetterAuthCSharpConsole
                                         {
                                             Console.WriteLine("Couldn't download file because user doesn't have a sub for this product");
                                         }
-                                    }
                                 }
                                 break;
                             }
