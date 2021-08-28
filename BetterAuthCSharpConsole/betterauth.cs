@@ -10,7 +10,7 @@ namespace BetterAuthCSharpConsole
         [DllImport("BetterAuthUser.dll", CharSet = CharSet.Unicode)]
         public static extern bool init_application(String application_name);
         [DllImport("BetterAuthUser.dll", CharSet = CharSet.Unicode)]
-        unsafe public static extern bool get_file(UInt32 id, UInt64* data, UInt32* size);
+        public static extern bool get_file(UInt32 id, out UInt64 data, out UInt32 size);
         [DllImport("BetterAuthUser.dll", CharSet = CharSet.Unicode)]
         public static extern bool c_register(String username, String password);
         [DllImport("BetterAuthUser.dll", CharSet = CharSet.Unicode)]
@@ -18,11 +18,7 @@ namespace BetterAuthCSharpConsole
         [DllImport("BetterAuthUser.dll", CharSet = CharSet.Unicode)]
         public static extern bool c_activatekey(String key);
         [DllImport("BetterAuthUser.dll", CharSet = CharSet.Unicode)]
-        unsafe public static extern string has_sub(UInt32 id, bool* has_sub);
-    
-
-
-            
+        public static extern string has_sub(UInt32 id, out bool hassub);
       
     }
 }
