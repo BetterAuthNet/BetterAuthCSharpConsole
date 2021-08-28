@@ -6,7 +6,6 @@ namespace BetterAuthCSharpConsole
     {
         static void Main(string[] args)
         {
-            betterauth.LoadLibrary("BetterAuthUser.dll");
             if (betterauth.init_application("ExampleBetterAuth"))
             {
                 Console.WriteLine("1) Login");
